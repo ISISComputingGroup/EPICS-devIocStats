@@ -1,0 +1,41 @@
+#RELEASE Location of external products
+# Run "gnumake clean uninstall install" in the application
+# top directory each time this file is changed.
+
+#NOTE: MSI moved to CONFIG_SITE.
+
+# SNCSEQ required only if testIocStatsApp will be built.
+#SNCSEQ     = /usr/local/epics/R3.14.11/modules/soft/synApps_5_5/support/seq-2-0-12
+#EPICS_BASE = /usr/local/epics/R3.14.11/base
+
+# The rest of this file is LCLS only and can be removed.
+# =============================================================
+# All needed variables come in via the following include:
+# =============================================================
+include $(TOP)/RELEASE_SITE
+
+TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
+
+# =============================================================
+# Define location of the modules tree
+# =============================================================
+EPICS_MODULES=$(MODULES_SITE_TOP)
+
+# =============================================================
+# Define the version of modules needed by
+# IOC apps or other Support apps - used by testIocStatsApp
+# =============================================================
+#SNCSEQ_MODULE_VERSION=seq-R2-0-11-lcls5
+
+# ============================================================
+# External Support - used by testIocStatsApp
+# ============================================================
+#SNCSEQ=$(EPICS_MODULES)/seq/$(SNCSEQ_MODULE_VERSION)
+
+# =================================================================
+# Define EPICS_BASE
+# EPICS_BASE usually appears last so other apps can override stuff:
+# =================================================================
+EPICS_BASE=C:/EPICS/base/3-14-12-2
+
+# End of file
