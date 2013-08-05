@@ -19,18 +19,18 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 # =============================================================
 # Define location of the modules tree
 # =============================================================
-EPICS_MODULES=$(MODULES_SITE_TOP)
+EPICS_MODULES=$(SUPPORT)
 
 # =============================================================
 # Define the version of modules needed by
 # IOC apps or other Support apps - used by testIocStatsApp
 # =============================================================
-#SNCSEQ_MODULE_VERSION=seq-R2-0-11-lcls5
+SNCSEQ_MODULE_VERSION=2-1-11
 
 # ============================================================
 # External Support - used by testIocStatsApp
 # ============================================================
-#SNCSEQ=$(EPICS_MODULES)/seq/$(SNCSEQ_MODULE_VERSION)
+SNCSEQ=$(EPICS_MODULES)/seq/$(SNCSEQ_MODULE_VERSION)
 
 # =================================================================
 # Define EPICS_BASE
@@ -38,4 +38,5 @@ EPICS_MODULES=$(MODULES_SITE_TOP)
 # =================================================================
 EPICS_BASE=C:/EPICS/base/3-14-12-2
 
+include $(TOP)/../../../ISIS_CONFIG.$(EPICS_HOST_ARCH)
 # End of file
