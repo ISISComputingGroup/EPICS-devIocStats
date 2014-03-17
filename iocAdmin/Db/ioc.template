@@ -1,7 +1,7 @@
 # Used by Channel Access Security to determine access to this IOC.
 record(mbbo, "$(IOCNAME):ACCESS")
 {
-  field(DESC, "$(IOCNAME) Acc Mode")
+  field(DESC, "Acc Mode")
   field(PINI, "YES")
   field(ZRST, "Running")
   field(ZRSV, "NO_ALARM")
@@ -51,7 +51,7 @@ record(calcout, "$(IOCNAME):START_CNT")
 #
 record( sub, "$(IOCNAME):READACF")
 {
-    field( DESC, "$(IOCNAME) ACF Update")
+    field( DESC, "ACF Update")
     field( INAM, "asSubInit")
     field( SNAM, "asSubProcess")
     field( BRSV, "INVALID")
