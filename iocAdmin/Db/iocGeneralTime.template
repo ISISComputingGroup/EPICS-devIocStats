@@ -4,7 +4,7 @@ record(ai, "$(IOCNAME):GTIM_TIME") {
   field(DTYP, "General Time")
   field(PREC, "3")
   field(INP,  "@TIME")
-  field(EGU,  "sec")
+  field(EGU,  "s")
 }
 
 record(bo, "$(IOCNAME):GTIM_RESET") {
