@@ -1,6 +1,8 @@
 TOP = .
 include $(TOP)/configure/CONFIG
 
+.NOTPARALLEL:
+
 DIRS += configure
 DIRS += devIocStats
 DIRS += iocAdmin
