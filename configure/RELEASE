@@ -1,7 +1,7 @@
 # macros for build dependencies
 
 # SNCSEQ required only if testIocStatsApp will be built.
-MAKE_TEST_IOC_APP=YES
+# set MAKE_TEST_IOC_APP=YES in CONFIG_SITE
 
 # =============================================================
 # Define the version of modules needed by
