@@ -330,7 +330,7 @@ static void timerQCreate(void*unused)
 }
 
 static epicsTimerId
-wdogCreate(void (*fn)(int), long arg)
+wdogCreate(void (*fn)(void*), void* arg)
 {
 	static epicsThreadOnceId inited = EPICS_THREAD_ONCE_INIT;
 
@@ -338,7 +338,7 @@ wdogCreate(void (*fn)(int), long arg)
 	if ( EPICS_THREAD_ONCE_INIT == inited )
 		epicsThreadOnce( &inited, timerQCreate, 0);
 
-	return epicsTimerQueueCreateTimer(timerQ, (void (*)(void*))fn, (void*)arg);
+	return epicsTimerQueueCreateTimer(timerQ, fn, arg);
 }
 
 static void notifyOnCaServInit(initHookState state)
@@ -356,8 +356,9 @@ static void getQueueData() {
     queueDataInitialized = 1;
 }
 
-static void scan_time(int type)
+static void scan_time(void *arg)
 {
+    long type = (long)arg;
     switch(type) {
       case MEMORY_TYPE:
       {
@@ -455,7 +456,7 @@ static long ai_init(int pass)
     /* Create timers */
     for (i = 0; i < TOTAL_TYPES; i++) {
         scanIoInit(&scan[i].ioscan);
-        scan[i].wd = wdogCreate(scan_time, i);
+        scan[i].wd = wdogCreate(scan_time, (void*)i);
         scan[i].total = 0;
         scan[i].on = 0;
         scan[i].rate_sec = parmTypes[i].scan_rate;
