@@ -65,13 +65,8 @@
 
 #define CLUSTSIZES CL_TBL_SIZE
 
-/* Must use cpuBurn to determine cpu usage */
-#ifndef SECONDS_TO_BURN
-#define SECONDS_TO_BURN 5
-#endif
+/* No support of getpid for vxWorks 5.4.  Maybe vxWorks 6? */
+#define getpid() -1
+#define getppid() -1
 
 extern char *sysBootLine;
-
-
-
-
