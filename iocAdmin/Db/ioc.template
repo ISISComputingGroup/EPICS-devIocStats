@@ -264,6 +264,15 @@ record(stringin, "$(IOCNAME):ST_SCRIPT2") {
   field(PINI, "YES")
 }
 
+record(waveform, "$(IOCNAME):ST_SCRIPT") {
+  field(DESC, "Startup Script")
+  field(DTYP, "IOC stats")
+  field(INP, "@startup_script")
+  field(NELM, "120")
+  field(FTVL, "CHAR")
+  field(PINI, "YES")
+}
+
 record(stringin, "$(IOCNAME):KERNEL_VERS") {
   field(DESC, "Kernel Version")
   field(DTYP, "IOC stats")
@@ -275,6 +284,15 @@ record(stringin, "$(IOCNAME):EPICS_VERS") {
   field(DESC, "EPICS Version")
   field(DTYP, "IOC stats")
   field(INP, "@epics_ver")
+  field(PINI, "YES")
+}
+
+record(waveform, "$(IOCNAME):EPICS_VERSION") {
+  field(DESC, "EPICS Version")
+  field(DTYP, "IOC stats")
+  field(INP, "@epics_ver")
+  field(NELM, "120")
+  field(FTVL, "CHAR")
   field(PINI, "YES")
 }
 
@@ -299,6 +317,15 @@ record(stringin, "$(IOCNAME):APP_DIR2") {
   field(PINI, "YES")
 }
 
+record(waveform, "$(IOCNAME):APP_DIR") {
+  field(DESC, "Application Directory")
+  field(DTYP, "IOC stats")
+  field(INP, "@pwd")
+  field(NELM, "160")
+  field(FTVL, "CHAR")
+  field(PINI, "YES")
+}
+
 record(stringin, "$(IOCNAME):UPTIME") {
   field(DESC, "Elapsed Time since Start")
   field(SCAN, "1 second")
@@ -320,3 +347,42 @@ record(stringin, "$(IOCNAME):LOCATION") {
   field(INP, "@location")
   field(PINI, "YES")
 }
+
+record(ai, "$(IOCNAME):PROCESS_ID") {
+  field(DESC, "Process ID")
+  field(PINI, "YES")
+  field(DTYP, "IOC stats")
+  field(INP, "@proc_id")
+}
+
+record(ai, "$(IOCNAME):PARENT_ID") {
+  field(DESC, "Parent Process ID")
+  field(PINI, "YES")
+  field(DTYP, "IOC stats")
+  field(INP, "@parent_proc_id")
+}
+
+record(ai, "$(IOCNAME):SCANONCE_Q_SIZE") {
+  field(DESC, "max # entries in IOC scanOnce queue")
+  field(DTYP, "IOC stats")
+  field(INP,  "@scanOnceQueueSize")
+  field(PINI, "YES")
+}
+record(ai, "$(IOCNAME):CB_Q_SIZE") {
+  field(DESC, "max # entries in IOC callback queues")
+  field(DTYP, "IOC stats")
+  field(INP,  "@cbQueueSize")
+  field(PINI, "YES")
+}
+
+substitute "QUEUE=scanOnce, QUEUE_CAPS=SCANONCE, QUEUE_TYPE=SCANONCE"
+include "iocQueue.db"
+
+substitute "QUEUE=cbLow, QUEUE_CAPS=CBLOW, QUEUE_TYPE=CB"
+include "iocQueue.db"
+
+substitute "QUEUE=cbMedium, QUEUE_CAPS=CBMEDIUM, QUEUE_TYPE=CB"
+include "iocQueue.db"
+
+substitute "QUEUE=cbHigh, QUEUE_CAPS=CBHIGH, QUEUE_TYPE=CB"
+include "iocQueue.db"

@@ -16,15 +16,22 @@
  *  Author: Ralph Lange (HZB/BESSY)
  *
  *  Modification History
+ *  2015-10-22 Keenan Lang (APS)
  *  2012-03-16 Helge Brands (PSI)
  *  2009-05-13 Ralph Lange (HZB/BESSY)
  *     Restructured OSD parts
  *
  */
+
+#if defined(__MINGW32__) || defined(__MINGW64__)
+#define WINVER 0x0501
+#endif
+
 #include <windows.h>
+#include <winbase.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <Psapi.h>
+#include <psapi.h>
 #pragma comment (lib, "Psapi.lib")
 
 
