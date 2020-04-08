@@ -20,8 +20,12 @@
  *     Restructured OSD parts
  *  2010-07-14  Ralph Lange (HZB/BESSY)
  *     Added CPU Utilization (IOC load), number of CPUs
- *
+ *  2016-02-25  Jeong Han Lee (ESS)
+ *     Replaced _SC_NPROCESSORS_CONF with _SC_NPROCESSORS_ONLN
  */
+
+#ifndef devIocStatsOSD_H
+#define devIocStatsOSD_H
 
 #include <string.h>
 #include <unistd.h>
@@ -35,6 +39,14 @@ static char *sysBootLine = "<not implemented>";
 #define FDTABLE_INUSE(i) (0)
 #define MAX_FILES 0
 #define CLUSTSIZES 2
-#define reboot(x) epicsExit(0)
-#define NO_OF_CPUS sysconf(_SC_NPROCESSORS_CONF)
+#define NO_OF_CPUS sysconf(_SC_NPROCESSORS_ONLN)
 #define TICKS_PER_SEC sysconf(_SC_CLK_TCK)
+
+#if EPICS_VERSION_INT>=VERSION_INT(3,15,1,0)
+#  define reboot(x) epicsExitLater(0)
+#else
+#  define reboot(x) epicsExit(0)
+#endif
+
+#endif /* devIocStatsOSD_H */
+

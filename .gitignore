@@ -1,13 +1,32 @@
+# Object and generated files
 O.*/
-/db
-/bin
-/dbd
-/include
-/lib
-/templates
-envPaths
+*~
+*.swp
+*BAK.adl
 cdCommands
+envPaths
 dllPath.bat
+auto_settings.sav*
+auto_positions.sav*
+
+# EPICS installation dirs
+/bin/
+/lib/
+/db/
+/dbd/
+/html/
+/doc/
+/include/
+/edl/
+/restore/
+/templates/
+
+# Local configuration
+*.local
+
+# IDE configuration
+/QtC-*
+.deps
 runIOC.bat
 runIOC.sh
 relPaths.sh
