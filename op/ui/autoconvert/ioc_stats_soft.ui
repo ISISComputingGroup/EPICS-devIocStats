@@ -4,16 +4,104 @@
 <widget class="QMainWindow" name="MainWindow">
     <property name="geometry">
         <rect>
-            <x>677</x>
-            <y>95</y>
+            <x>807</x>
+            <y>119</y>
             <width>540</width>
-            <height>756</height>
+            <height>560</height>
         </rect>
     </property>
     <property name="styleSheet">
         <string>
 
 QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
+
+caTable {
+       font: 10pt;
+       background: cornsilk;
+       alternate-background-color: wheat;
+}
+
+caLineEdit {
+     border-radius: 1px;
+     background: lightyellow;
+     color: black;
+ }
+
+caTextEntry {
+    color: rgb(127, 0, 63);
+    background-color: cornsilk;
+    selection-color: #0a214c;
+    selection-background-color: wheat;
+    border: 1px groove black;
+    border-radius: 1px;
+    padding: 1px;
+}
+
+caTextEntry:focus {
+    padding: 0px;
+    border: 2px groove darkred;
+    border-radius: 1px;
+}
+
+QPushButton {
+      border-color: #00b;
+      border-radius: 2px;
+      padding: 3px;
+      border-width: 1px;
+
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,
+						   stop:0   rgba(224, 239, 255, 255),
+						   stop:0.5 rgba(199, 215, 230, 255),
+						   stop:1   rgba(184, 214, 236, 255));
+}
+QPushButton:hover {
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,
+						stop:0   rgba(201, 226, 255, 255),
+						stop:0.5 rgba(177, 204, 230, 255),
+						stop:1   rgba(163, 205, 236, 255));
+}
+QPushButton:pressed {
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,
+						stop:0   rgba(174, 219, 255, 255),
+						stop:0.5 rgba(165, 199, 230, 255),
+						stop:1   rgba(134, 188, 236, 255));
+}
+
+QPushButton:disabled {
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,
+						stop:0   rgba(174, 219, 255, 255),
+						stop:0.5 rgba(165, 199, 230, 255),
+						stop:1   rgba(134, 188, 236, 255));
+}
+
+caChoice {
+      background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                  stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                  stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+}
+
+caChoice &gt; QPushButton {
+      text-align: left;
+      padding: 1px;
+}
+
+caSlider::groove:horizontal {
+border: 1px solid #bbb;
+background: lightgrey;
+height: 20px;
+border-radius: 4px;
+}
+
+caSlider::handle:horizontal {
+background: red;
+border: 1px solid #777;
+width: 13px;
+margin-top: -2px;
+margin-bottom: -2px;
+border-radius: 2px;
+}
+
+
 
 </string>
     </property>
@@ -44,9 +132,9 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>6</x>
-                    <y>4</y>
-                    <width>225</width>
+                    <x>5</x>
+                    <y>8</y>
+                    <width>180</width>
                     <height>25</height>
                 </rect>
             </property>
@@ -80,10 +168,10 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>5</x>
-                    <y>29</y>
-                    <width>212</width>
-                    <height>27</height>
+                    <x>210</x>
+                    <y>8</y>
+                    <width>250</width>
+                    <height>25</height>
                 </rect>
             </property>
             <property name="alignment">
@@ -96,8 +184,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>0</x>
-                    <y>58</y>
+                    <x>1</x>
+                    <y>40</y>
                     <width>540</width>
                     <height>2</height>
                 </rect>
@@ -150,8 +238,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>10</x>
-                    <y>66</y>
-                    <width>110</width>
+                    <y>48</y>
+                    <width>108</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -186,8 +274,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>10</x>
-                    <y>86</y>
-                    <width>110</width>
+                    <y>68</y>
+                    <width>108</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -222,8 +310,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>10</x>
-                    <y>106</y>
-                    <width>110</width>
+                    <y>88</y>
+                    <width>63</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -258,8 +346,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>10</x>
-                    <y>126</y>
-                    <width>110</width>
+                    <y>108</y>
+                    <width>81</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -294,8 +382,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>10</x>
-                    <y>146</y>
-                    <width>110</width>
+                    <y>128</y>
+                    <width>81</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -330,8 +418,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>10</x>
-                    <y>166</y>
-                    <width>110</width>
+                    <y>148</y>
+                    <width>81</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -366,8 +454,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>10</x>
-                    <y>186</y>
-                    <width>110</width>
+                    <y>168</y>
+                    <width>81</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -402,8 +490,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>10</x>
-                    <y>206</y>
-                    <width>110</width>
+                    <y>188</y>
+                    <width>72</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -415,7 +503,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>330</x>
-                    <y>60</y>
+                    <y>42</y>
                     <width>1</width>
                     <height>170</height>
                 </rect>
@@ -441,7 +529,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <enum>Solid</enum>
             </property>
             <property name="xyPairs">
-                <string>0,0;0,170;</string>
+                <string>0,170;</string>
             </property>
         </widget>
         <widget class="caLabel" name="caLabel_10">
@@ -471,8 +559,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>340</x>
-                    <y>70</y>
-                    <width>120</width>
+                    <y>52</y>
+                    <width>108</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -507,8 +595,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>340</x>
-                    <y>100</y>
-                    <width>120</width>
+                    <y>82</y>
+                    <width>117</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -543,8 +631,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>340</x>
-                    <y>130</y>
-                    <width>120</width>
+                    <y>112</y>
+                    <width>108</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -556,7 +644,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>125</x>
-                    <y>66</y>
+                    <y>48</y>
                     <width>190</width>
                     <height>15</height>
                 </rect>
@@ -600,7 +688,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="formatType">
-                <enum>decimal</enum>
+                <enum>string</enum>
             </property>
             <property name="colorMode">
                 <enum>caLineEdit::Static</enum>
@@ -610,7 +698,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>125</x>
-                    <y>86</y>
+                    <y>68</y>
                     <width>190</width>
                     <height>15</height>
                 </rect>
@@ -654,7 +742,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="formatType">
-                <enum>decimal</enum>
+                <enum>string</enum>
             </property>
             <property name="colorMode">
                 <enum>caLineEdit::Static</enum>
@@ -664,7 +752,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>125</x>
-                    <y>106</y>
+                    <y>88</y>
                     <width>190</width>
                     <height>15</height>
                 </rect>
@@ -708,7 +796,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="formatType">
-                <enum>decimal</enum>
+                <enum>string</enum>
             </property>
             <property name="colorMode">
                 <enum>caLineEdit::Static</enum>
@@ -718,7 +806,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>125</x>
-                    <y>126</y>
+                    <y>108</y>
                     <width>190</width>
                     <height>15</height>
                 </rect>
@@ -772,7 +860,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>125</x>
-                    <y>146</y>
+                    <y>128</y>
                     <width>190</width>
                     <height>15</height>
                 </rect>
@@ -826,7 +914,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>125</x>
-                    <y>166</y>
+                    <y>148</y>
                     <width>190</width>
                     <height>15</height>
                 </rect>
@@ -870,7 +958,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="formatType">
-                <enum>decimal</enum>
+                <enum>string</enum>
             </property>
             <property name="colorMode">
                 <enum>caLineEdit::Static</enum>
@@ -880,7 +968,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>125</x>
-                    <y>186</y>
+                    <y>168</y>
                     <width>190</width>
                     <height>15</height>
                 </rect>
@@ -924,7 +1012,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="formatType">
-                <enum>decimal</enum>
+                <enum>string</enum>
             </property>
             <property name="colorMode">
                 <enum>caLineEdit::Static</enum>
@@ -934,7 +1022,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>125</x>
-                    <y>206</y>
+                    <y>188</y>
                     <width>190</width>
                     <height>15</height>
                 </rect>
@@ -978,7 +1066,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="formatType">
-                <enum>decimal</enum>
+                <enum>string</enum>
             </property>
             <property name="colorMode">
                 <enum>caLineEdit::Static</enum>
@@ -988,7 +1076,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>470</x>
-                    <y>70</y>
+                    <y>52</y>
                     <width>60</width>
                     <height>15</height>
                 </rect>
@@ -1042,7 +1130,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>470</x>
-                    <y>100</y>
+                    <y>82</y>
                     <width>60</width>
                     <height>15</height>
                 </rect>
@@ -1096,7 +1184,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>470</x>
-                    <y>130</y>
+                    <y>112</y>
                     <width>60</width>
                     <height>15</height>
                 </rect>
@@ -1153,7 +1241,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>0</x>
-                    <y>230</y>
+                    <y>212</y>
                     <width>540</width>
                     <height>2</height>
                 </rect>
@@ -1179,14 +1267,98 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <enum>Solid</enum>
             </property>
         </widget>
+        <widget class="caRelatedDisplay" name="caRelatedDisplay_0">
+            <property name="geometry">
+                <rect>
+                    <x>338</x>
+                    <y>144</y>
+                    <width>120</width>
+                    <height>20</height>
+                </rect>
+            </property>
+            <property name="foreground">
+                <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="background">
+                <color alpha="255">
+                    <red>158</red>
+                    <green>158</green>
+                    <blue>158</blue>
+                </color>
+            </property>
+            <property name="label">
+                <string>Alarm Limits</string>
+            </property>
+            <property name="stackingMode">
+                <enum>Menu</enum>
+            </property>
+            <property name="labels">
+                <string>Alarm Limits</string>
+            </property>
+            <property name="files">
+                <string>ioc_stats_limits.adl</string>
+            </property>
+            <property name="args">
+                <string>ioc=$(ioc)</string>
+            </property>
+            <property name="removeParent">
+                <string>false</string>
+            </property>
+        </widget>
+        <widget class="caRelatedDisplay" name="caRelatedDisplay_1">
+            <property name="geometry">
+                <rect>
+                    <x>339</x>
+                    <y>173</y>
+                    <width>120</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <property name="foreground">
+                <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="background">
+                <color alpha="255">
+                    <red>158</red>
+                    <green>158</green>
+                    <blue>158</blue>
+                </color>
+            </property>
+            <property name="label">
+                <string>EPICS Env Vars</string>
+            </property>
+            <property name="stackingMode">
+                <enum>Menu</enum>
+            </property>
+            <property name="labels">
+                <string>EPICS Env Vars</string>
+            </property>
+            <property name="files">
+                <string>ioc_stats_epics_env.adl</string>
+            </property>
+            <property name="args">
+                <string>ioc=$(ioc)</string>
+            </property>
+            <property name="removeParent">
+                <string>false</string>
+            </property>
+        </widget>
         <widget class="caGraphics" name="caRectangle_2">
             <property name="form">
                 <enum>caGraphics::Rectangle</enum>
             </property>
             <property name="geometry">
                 <rect>
-                    <x>0</x>
-                    <y>545</y>
+                    <x>1</x>
+                    <y>448</y>
                     <width>540</width>
                     <height>2</height>
                 </rect>
@@ -1238,8 +1410,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>5</x>
-                    <y>357</y>
+                    <x>6</x>
+                    <y>339</y>
                     <width>117</width>
                     <height>15</height>
                 </rect>
@@ -1274,8 +1446,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>4</x>
-                    <y>417</y>
+                    <x>6</x>
+                    <y>380</y>
                     <width>189</width>
                     <height>15</height>
                 </rect>
@@ -1310,9 +1482,9 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>4</x>
-                    <y>450</y>
-                    <width>150</width>
+                    <x>6</x>
+                    <y>413</y>
+                    <width>126</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -1323,8 +1495,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <widget class="caLineEdit" name="caLineEdit_11">
             <property name="geometry">
                 <rect>
-                    <x>112</x>
-                    <y>357</y>
+                    <x>130</x>
+                    <y>339</y>
                     <width>350</width>
                     <height>15</height>
                 </rect>
@@ -1368,7 +1540,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="formatType">
-                <enum>decimal</enum>
+                <enum>string</enum>
             </property>
             <property name="colorMode">
                 <enum>caLineEdit::Static</enum>
@@ -1377,8 +1549,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <widget class="caLineEdit" name="caLineEdit_12">
             <property name="geometry">
                 <rect>
-                    <x>4</x>
-                    <y>432</y>
+                    <x>6</x>
+                    <y>395</y>
                     <width>265</width>
                     <height>13</height>
                 </rect>
@@ -1403,6 +1575,9 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                     <blue>187</blue>
                 </color>
             </property>
+            <property name="alignment">
+                <set>Qt::AlignAbsolute|Qt::AlignRight|Qt::AlignVCenter</set>
+            </property>
             <property name="limitsMode">
                 <enum>caLineEdit::Channel</enum>
             </property>
@@ -1418,11 +1593,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="maxValue">
                 <double>1.0</double>
             </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
             <property name="formatType">
-                <enum>decimal</enum>
+                <enum>string</enum>
             </property>
             <property name="colorMode">
                 <enum>caLineEdit::Static</enum>
@@ -1431,8 +1603,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <widget class="caLineEdit" name="caLineEdit_13">
             <property name="geometry">
                 <rect>
-                    <x>4</x>
-                    <y>465</y>
+                    <x>6</x>
+                    <y>428</y>
                     <width>265</width>
                     <height>12</height>
                 </rect>
@@ -1457,6 +1629,9 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                     <blue>187</blue>
                 </color>
             </property>
+            <property name="alignment">
+                <set>Qt::AlignAbsolute|Qt::AlignRight|Qt::AlignVCenter</set>
+            </property>
             <property name="limitsMode">
                 <enum>caLineEdit::Channel</enum>
             </property>
@@ -1472,11 +1647,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="maxValue">
                 <double>1.0</double>
             </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
             <property name="formatType">
-                <enum>decimal</enum>
+                <enum>string</enum>
             </property>
             <property name="colorMode">
                 <enum>caLineEdit::Static</enum>
@@ -1485,8 +1657,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <widget class="caLineEdit" name="caLineEdit_14">
             <property name="geometry">
                 <rect>
-                    <x>269</x>
-                    <y>432</y>
+                    <x>271</x>
+                    <y>395</y>
                     <width>265</width>
                     <height>13</height>
                 </rect>
@@ -1530,7 +1702,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="formatType">
-                <enum>decimal</enum>
+                <enum>string</enum>
             </property>
             <property name="colorMode">
                 <enum>caLineEdit::Static</enum>
@@ -1539,8 +1711,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <widget class="caLineEdit" name="caLineEdit_15">
             <property name="geometry">
                 <rect>
-                    <x>269</x>
-                    <y>465</y>
+                    <x>271</x>
+                    <y>428</y>
                     <width>265</width>
                     <height>12</height>
                 </rect>
@@ -1584,7 +1756,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="formatType">
-                <enum>decimal</enum>
+                <enum>string</enum>
             </property>
             <property name="colorMode">
                 <enum>caLineEdit::Static</enum>
@@ -1596,10 +1768,43 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>313</x>
-                    <y>545</y>
+                    <x>344</x>
+                    <y>450</y>
                     <width>1</width>
-                    <height>260</height>
+                    <height>110</height>
+                </rect>
+            </property>
+            <property name="foreground">
+                <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="fillstyle">
+                <enum>Filled</enum>
+            </property>
+            <property name="lineColor">
+                <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="linestyle">
+                <enum>Solid</enum>
+            </property>
+        </widget>
+        <widget class="caGraphics" name="caRectangle_4">
+            <property name="form">
+                <enum>caGraphics::Rectangle</enum>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>186</x>
+                    <y>449</y>
+                    <width>1</width>
+                    <height>110</height>
                 </rect>
             </property>
             <property name="foreground">
@@ -1649,8 +1854,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>6</x>
-                    <y>551</y>
+                    <x>16</x>
+                    <y>454</y>
                     <width>144</width>
                     <height>15</height>
                 </rect>
@@ -1685,9 +1890,9 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>8</x>
-                    <y>573</y>
-                    <width>50</width>
+                    <x>11</x>
+                    <y>479</y>
+                    <width>36</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -1721,9 +1926,9 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>8</x>
-                    <y>593</y>
-                    <width>50</width>
+                    <x>11</x>
+                    <y>496</y>
+                    <width>36</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -1757,8 +1962,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>8</x>
-                    <y>608</y>
+                    <x>11</x>
+                    <y>514</y>
                     <width>63</width>
                     <height>15</height>
                 </rect>
@@ -1793,8 +1998,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>8</x>
-                    <y>621</y>
+                    <x>11</x>
+                    <y>527</y>
                     <width>63</width>
                     <height>15</height>
                 </rect>
@@ -1829,8 +2034,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>368</x>
-                    <y>554</y>
+                    <x>401</x>
+                    <y>454</y>
                     <width>72</width>
                     <height>15</height>
                 </rect>
@@ -1865,8 +2070,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>373</x>
-                    <y>582</y>
+                    <x>189</x>
+                    <y>454</y>
                     <width>153</width>
                     <height>15</height>
                 </rect>
@@ -1901,8 +2106,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>373</x>
-                    <y>607</y>
+                    <x>205</x>
+                    <y>479</y>
                     <width>36</width>
                     <height>15</height>
                 </rect>
@@ -1937,9 +2142,9 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>373</x>
-                    <y>627</y>
-                    <width>30</width>
+                    <x>205</x>
+                    <y>499</y>
+                    <width>27</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -1950,8 +2155,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <widget class="caLineEdit" name="caLineEdit_16">
             <property name="geometry">
                 <rect>
-                    <x>426</x>
-                    <y>555</y>
+                    <x>475</x>
+                    <y>479</y>
                     <width>60</width>
                     <height>15</height>
                 </rect>
@@ -2004,8 +2209,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <widget class="caLineEdit" name="caLineEdit_17">
             <property name="geometry">
                 <rect>
-                    <x>413</x>
-                    <y>607</y>
+                    <x>245</x>
+                    <y>479</y>
                     <width>60</width>
                     <height>15</height>
                 </rect>
@@ -2058,8 +2263,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <widget class="caLineEdit" name="caLineEdit_18">
             <property name="geometry">
                 <rect>
-                    <x>413</x>
-                    <y>627</y>
+                    <x>245</x>
+                    <y>499</y>
                     <width>60</width>
                     <height>15</height>
                 </rect>
@@ -2112,8 +2317,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <widget class="caLineEdit" name="caLineEdit_19">
             <property name="geometry">
                 <rect>
-                    <x>88</x>
-                    <y>573</y>
+                    <x>79</x>
+                    <y>479</y>
                     <width>100</width>
                     <height>15</height>
                 </rect>
@@ -2166,8 +2371,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <widget class="caLineEdit" name="caLineEdit_20">
             <property name="geometry">
                 <rect>
-                    <x>88</x>
-                    <y>593</y>
+                    <x>79</x>
+                    <y>499</y>
                     <width>100</width>
                     <height>15</height>
                 </rect>
@@ -2220,8 +2425,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <widget class="caLineEdit" name="caLineEdit_21">
             <property name="geometry">
                 <rect>
-                    <x>88</x>
-                    <y>613</y>
+                    <x>79</x>
+                    <y>520</y>
                     <width>100</width>
                     <height>15</height>
                 </rect>
@@ -2271,90 +2476,6 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <enum>caLineEdit::Alarm_Static</enum>
             </property>
         </widget>
-        <widget class="caRelatedDisplay" name="caRelatedDisplay_0">
-            <property name="geometry">
-                <rect>
-                    <x>338</x>
-                    <y>162</y>
-                    <width>110</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>158</red>
-                    <green>158</green>
-                    <blue>158</blue>
-                </color>
-            </property>
-            <property name="label">
-                <string>Alarm Limits</string>
-            </property>
-            <property name="stackingMode">
-                <enum>Menu</enum>
-            </property>
-            <property name="labels">
-                <string>Alarm Limits</string>
-            </property>
-            <property name="files">
-                <string>ioc_stats_limits.adl</string>
-            </property>
-            <property name="args">
-                <string>ioc=$(ioc)</string>
-            </property>
-            <property name="removeParent">
-                <string>false</string>
-            </property>
-        </widget>
-        <widget class="caRelatedDisplay" name="caRelatedDisplay_1">
-            <property name="geometry">
-                <rect>
-                    <x>339</x>
-                    <y>191</y>
-                    <width>110</width>
-                    <height>21</height>
-                </rect>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>158</red>
-                    <green>158</green>
-                    <blue>158</blue>
-                </color>
-            </property>
-            <property name="label">
-                <string>EPICS Env Vars</string>
-            </property>
-            <property name="stackingMode">
-                <enum>Menu</enum>
-            </property>
-            <property name="labels">
-                <string>EPICS Env Vars</string>
-            </property>
-            <property name="files">
-                <string>ioc_stats_epics_env.adl</string>
-            </property>
-            <property name="args">
-                <string>ioc=$(ioc)</string>
-            </property>
-            <property name="removeParent">
-                <string>false</string>
-            </property>
-        </widget>
         <widget class="caLabel" name="caLabel_25">
             <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
@@ -2381,9 +2502,9 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>5</x>
-                    <y>377</y>
-                    <width>110</width>
+                    <x>6</x>
+                    <y>359</y>
+                    <width>90</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -2394,8 +2515,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <widget class="caLineEdit" name="caLineEdit_22">
             <property name="geometry">
                 <rect>
-                    <x>112</x>
-                    <y>377</y>
+                    <x>130</x>
+                    <y>359</y>
                     <width>350</width>
                     <height>15</height>
                 </rect>
@@ -2439,23 +2560,15 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="formatType">
-                <enum>decimal</enum>
+                <enum>string</enum>
             </property>
             <property name="colorMode">
                 <enum>caLineEdit::Static</enum>
             </property>
         </widget>
-        <widget class="caGraphics" name="caRectangle_4">
-            <property name="form">
-                <enum>caGraphics::Rectangle</enum>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>1</x>
-                    <y>343</y>
-                    <width>540</width>
-                    <height>2</height>
-                </rect>
+        <widget class="caLabel" name="caLabel_26">
+            <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
             </property>
             <property name="foreground">
                 <color alpha="255">
@@ -2464,25 +2577,262 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                     <blue>0</blue>
                 </color>
             </property>
-            <property name="fillstyle">
-                <enum>Filled</enum>
+            <property name="background">
+                <color alpha="0">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
             </property>
-            <property name="lineColor">
+            <property name="text">
+                <string>IOC (one CPU)</string>
+            </property>
+            <property name="fontScaleMode">
+                <enum>ESimpleLabel::WidthAndHeight</enum>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>351</x>
+                    <y>479</y>
+                    <width>117</width>
+                    <height>15</height>
+                </rect>
+            </property>
+            <property name="alignment">
+                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+        </widget>
+        <widget class="caLineEdit" name="caLineEdit_23">
+            <property name="geometry">
+                <rect>
+                    <x>475</x>
+                    <y>507</y>
+                    <width>60</width>
+                    <height>15</height>
+                </rect>
+            </property>
+            <property name="fontScaleMode">
+                <enum>caLineEdit::WidthAndHeight</enum>
+            </property>
+            <property name="channel">
+                <string>$(ioc):SYS_CPU_LOAD</string>
+            </property>
+            <property name="foreground">
                 <color alpha="255">
                     <red>0</red>
                     <green>0</green>
                     <blue>0</blue>
                 </color>
             </property>
-            <property name="linestyle">
-                <enum>Solid</enum>
+            <property name="background">
+                <color alpha="255">
+                    <red>120</red>
+                    <green>120</green>
+                    <blue>120</blue>
+                </color>
             </property>
+            <property name="alignment">
+                <set>Qt::AlignAbsolute|Qt::AlignHCenter|Qt::AlignVCenter</set>
+            </property>
+            <property name="limitsMode">
+                <enum>caLineEdit::Channel</enum>
+            </property>
+            <property name="limitsMode">
+                <enum>caLineEdit::Channel</enum>
+            </property>
+            <property name="precisionMode">
+                <enum>caLineEdit::Channel</enum>
+            </property>
+            <property name="minValue">
+                <double>0.0</double>
+            </property>
+            <property name="maxValue">
+                <double>1.0</double>
+            </property>
+            <property name="formatType">
+                <enum>decimal</enum>
+            </property>
+            <property name="colorMode">
+                <enum>caLineEdit::Alarm_Static</enum>
+            </property>
+        </widget>
+        <widget class="caLabel" name="caLabel_27">
+            <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="foreground">
+                <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="background">
+                <color alpha="0">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="text">
+                <string># System CPUs</string>
+            </property>
+            <property name="fontScaleMode">
+                <enum>ESimpleLabel::WidthAndHeight</enum>
+            </property>
+            <property name="geometry">
+                <rect>
+                    <x>350</x>
+                    <y>534</y>
+                    <width>117</width>
+                    <height>15</height>
+                </rect>
+            </property>
+            <property name="alignment">
+                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+        </widget>
+        <widget class="caLineEdit" name="caLineEdit_24">
+            <property name="geometry">
+                <rect>
+                    <x>475</x>
+                    <y>534</y>
+                    <width>60</width>
+                    <height>15</height>
+                </rect>
+            </property>
+            <property name="fontScaleMode">
+                <enum>caLineEdit::WidthAndHeight</enum>
+            </property>
+            <property name="channel">
+                <string>$(ioc):CPU_CNT</string>
+            </property>
+            <property name="foreground">
+                <color alpha="255">
+                    <red>0</red>
+                    <green>0</green>
+                    <blue>0</blue>
+                </color>
+            </property>
+            <property name="background">
+                <color alpha="255">
+                    <red>120</red>
+                    <green>120</green>
+                    <blue>120</blue>
+                </color>
+            </property>
+            <property name="alignment">
+                <set>Qt::AlignAbsolute|Qt::AlignHCenter|Qt::AlignVCenter</set>
+            </property>
+            <property name="limitsMode">
+                <enum>caLineEdit::Channel</enum>
+            </property>
+            <property name="limitsMode">
+                <enum>caLineEdit::Channel</enum>
+            </property>
+            <property name="precisionMode">
+                <enum>caLineEdit::Channel</enum>
+            </property>
+            <property name="minValue">
+                <double>0.0</double>
+            </property>
+            <property name="maxValue">
+                <double>1.0</double>
+            </property>
+            <property name="formatType">
+                <enum>decimal</enum>
+            </property>
+            <property name="colorMode">
+                <enum>caLineEdit::Alarm_Static</enum>
+            </property>
+        </widget>
+        <widget class="caFrame" name="caFrame_0">
+            <property name="geometry">
+                <rect>
+                    <x>350</x>
+                    <y>499</y>
+                    <width>102</width>
+                    <height>32</height>
+                </rect>
+            </property>
+            <widget class="caLabel" name="caLabel_28">
+                <property name="frameShape">
+                    <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="foreground">
+                    <color alpha="255">
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                </property>
+                <property name="background">
+                    <color alpha="0">
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                </property>
+                <property name="text">
+                    <string>System</string>
+                </property>
+                <property name="fontScaleMode">
+                    <enum>ESimpleLabel::WidthAndHeight</enum>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>0</x>
+                        <y>0</y>
+                        <width>100</width>
+                        <height>15</height>
+                    </rect>
+                </property>
+                <property name="alignment">
+                    <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+            </widget>
+            <widget class="caLabel" name="caLabel_29">
+                <property name="frameShape">
+                    <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="foreground">
+                    <color alpha="255">
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                </property>
+                <property name="background">
+                    <color alpha="0">
+                        <red>0</red>
+                        <green>0</green>
+                        <blue>0</blue>
+                    </color>
+                </property>
+                <property name="text">
+                    <string>(all CPUs)</string>
+                </property>
+                <property name="fontScaleMode">
+                    <enum>ESimpleLabel::WidthAndHeight</enum>
+                </property>
+                <property name="geometry">
+                    <rect>
+                        <x>0</x>
+                        <y>15</y>
+                        <width>100</width>
+                        <height>15</height>
+                    </rect>
+                </property>
+                <property name="alignment">
+                    <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+            </widget>
         </widget>
         <widget class="caMenu" name="caMenu_0">
             <property name="geometry">
                 <rect>
-                    <x>36</x>
-                    <y>320</y>
+                    <x>49</x>
+                    <y>302</y>
                     <width>96</width>
                     <height>21</height>
                 </rect>
@@ -2508,7 +2858,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <enum>caMenu::Static</enum>
             </property>
         </widget>
-        <widget class="caLabel" name="caLabel_26">
+        <widget class="caLabel" name="caLabel_30">
             <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
             </property>
@@ -2534,8 +2884,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>7</x>
-                    <y>323</y>
+                    <x>8</x>
+                    <y>305</y>
                     <width>36</width>
                     <height>15</height>
                 </rect>
@@ -2548,8 +2898,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>150</x>
-                    <y>320</y>
-                    <width>226</width>
+                    <y>302</y>
+                    <width>250</width>
                     <height>21</height>
                 </rect>
             </property>
@@ -2589,8 +2939,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <widget class="caRelatedDisplay" name="caRelatedDisplay_3">
             <property name="geometry">
                 <rect>
-                    <x>394</x>
-                    <y>320</y>
+                    <x>405</x>
+                    <y>302</y>
                     <width>110</width>
                     <height>21</height>
                 </rect>
@@ -2628,7 +2978,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <string>false</string>
             </property>
         </widget>
-        <widget class="caLabel" name="caLabel_27">
+        <widget class="caLabel" name="caLabel_31">
             <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
             </property>
@@ -2655,7 +3005,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>139</x>
-                    <y>236</y>
+                    <y>218</y>
                     <width>198</width>
                     <height>15</height>
                 </rect>
@@ -2664,7 +3014,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
         </widget>
-        <widget class="caLabel" name="caLabel_28">
+        <widget class="caLabel" name="caLabel_32">
             <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
             </property>
@@ -2691,8 +3041,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>9</x>
-                    <y>254</y>
-                    <width>110</width>
+                    <y>236</y>
+                    <width>63</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -2700,7 +3050,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
         </widget>
-        <widget class="caLabel" name="caLabel_29">
+        <widget class="caLabel" name="caLabel_33">
             <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
             </property>
@@ -2727,8 +3077,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>9</x>
-                    <y>274</y>
-                    <width>110</width>
+                    <y>256</y>
+                    <width>45</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -2736,7 +3086,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
         </widget>
-        <widget class="caLabel" name="caLabel_30">
+        <widget class="caLabel" name="caLabel_34">
             <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
             </property>
@@ -2755,7 +3105,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 </color>
             </property>
             <property name="text">
-                <string>Highest Priority</string>
+                <string>Highest Prio</string>
             </property>
             <property name="fontScaleMode">
                 <enum>ESimpleLabel::WidthAndHeight</enum>
@@ -2763,8 +3113,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>9</x>
-                    <y>294</y>
-                    <width>144</width>
+                    <y>276</y>
+                    <width>108</width>
                     <height>15</height>
                 </rect>
             </property>
@@ -2772,11 +3122,11 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
         </widget>
-        <widget class="caLineEdit" name="caLineEdit_23">
+        <widget class="caLineEdit" name="caLineEdit_25">
             <property name="geometry">
                 <rect>
-                    <x>124</x>
-                    <y>254</y>
+                    <x>122</x>
+                    <y>236</y>
                     <width>190</width>
                     <height>15</height>
                 </rect>
@@ -2820,17 +3170,17 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="formatType">
-                <enum>decimal</enum>
+                <enum>string</enum>
             </property>
             <property name="colorMode">
                 <enum>caLineEdit::Static</enum>
             </property>
         </widget>
-        <widget class="caLineEdit" name="caLineEdit_24">
+        <widget class="caLineEdit" name="caLineEdit_26">
             <property name="geometry">
                 <rect>
-                    <x>124</x>
-                    <y>274</y>
+                    <x>122</x>
+                    <y>256</y>
                     <width>190</width>
                     <height>15</height>
                 </rect>
@@ -2874,17 +3224,17 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="formatType">
-                <enum>decimal</enum>
+                <enum>string</enum>
             </property>
             <property name="colorMode">
                 <enum>caLineEdit::Static</enum>
             </property>
         </widget>
-        <widget class="caLineEdit" name="caLineEdit_25">
+        <widget class="caLineEdit" name="caLineEdit_27">
             <property name="geometry">
                 <rect>
-                    <x>124</x>
-                    <y>294</y>
+                    <x>122</x>
+                    <y>276</y>
                     <width>190</width>
                     <height>15</height>
                 </rect>
@@ -2928,13 +3278,13 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="formatType">
-                <enum>decimal</enum>
+                <enum>string</enum>
             </property>
             <property name="colorMode">
                 <enum>caLineEdit::Static</enum>
             </property>
         </widget>
-        <widget class="caLabel" name="caLabel_31">
+        <widget class="caLabel" name="caLabel_35">
             <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
             </property>
@@ -2960,8 +3310,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>342</x>
-                    <y>250</y>
+                    <x>322</x>
+                    <y>232</y>
                     <width>54</width>
                     <height>15</height>
                 </rect>
@@ -2970,7 +3320,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
         </widget>
-        <widget class="caLabel" name="caLabel_32">
+        <widget class="caLabel" name="caLabel_36">
             <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
             </property>
@@ -2996,8 +3346,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>341</x>
-                    <y>262</y>
+                    <x>322</x>
+                    <y>244</y>
                     <width>90</width>
                     <height>15</height>
                 </rect>
@@ -3006,11 +3356,11 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
         </widget>
-        <widget class="caLineEdit" name="caLineEdit_26">
+        <widget class="caLineEdit" name="caLineEdit_28">
             <property name="geometry">
                 <rect>
-                    <x>409</x>
-                    <y>254</y>
+                    <x>416</x>
+                    <y>236</y>
                     <width>120</width>
                     <height>15</height>
                 </rect>
@@ -3060,7 +3410,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <enum>caLineEdit::Static</enum>
             </property>
         </widget>
-        <widget class="caLabel" name="caLabel_33">
+        <widget class="caLabel" name="caLabel_37">
             <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
             </property>
@@ -3086,8 +3436,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="geometry">
                 <rect>
-                    <x>340</x>
-                    <y>282</y>
+                    <x>322</x>
+                    <y>270</y>
                     <width>72</width>
                     <height>15</height>
                 </rect>
@@ -3096,11 +3446,11 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
         </widget>
-        <widget class="caLineEdit" name="caLineEdit_27">
+        <widget class="caLineEdit" name="caLineEdit_29">
             <property name="geometry">
                 <rect>
                     <x>409</x>
-                    <y>279</y>
+                    <y>270</y>
                     <width>60</width>
                     <height>15</height>
                 </rect>
@@ -3154,7 +3504,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>478</x>
-                    <y>277</y>
+                    <y>269</y>
                     <width>53</width>
                     <height>17</height>
                 </rect>
@@ -3196,7 +3546,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             <property name="geometry">
                 <rect>
                     <x>2</x>
-                    <y>312</y>
+                    <y>325</y>
                     <width>540</width>
                     <height>2</height>
                 </rect>
@@ -3222,286 +3572,16 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
                 <enum>Solid</enum>
             </property>
         </widget>
-        <widget class="caLabel" name="caLabel_34">
-            <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="0">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="text">
-                <string>Boot Line</string>
-            </property>
-            <property name="fontScaleMode">
-                <enum>ESimpleLabel::WidthAndHeight</enum>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>4</x>
-                    <y>482</y>
-                    <width>150</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-        </widget>
-        <widget class="caLineEdit" name="caLineEdit_28">
-            <property name="geometry">
-                <rect>
-                    <x>4</x>
-                    <y>497</y>
-                    <width>265</width>
-                    <height>12</height>
-                </rect>
-            </property>
-            <property name="fontScaleMode">
-                <enum>caLineEdit::WidthAndHeight</enum>
-            </property>
-            <property name="channel">
-                <string>$(ioc):BOOTLINE1</string>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>187</red>
-                    <green>187</green>
-                    <blue>187</blue>
-                </color>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="precisionMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="minValue">
-                <double>0.0</double>
-            </property>
-            <property name="maxValue">
-                <double>1.0</double>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-            <property name="formatType">
-                <enum>decimal</enum>
-            </property>
-            <property name="colorMode">
-                <enum>caLineEdit::Static</enum>
-            </property>
-        </widget>
-        <widget class="caLineEdit" name="caLineEdit_29">
-            <property name="geometry">
-                <rect>
-                    <x>269</x>
-                    <y>497</y>
-                    <width>265</width>
-                    <height>12</height>
-                </rect>
-            </property>
-            <property name="fontScaleMode">
-                <enum>caLineEdit::WidthAndHeight</enum>
-            </property>
-            <property name="channel">
-                <string>$(ioc):BOOTLINE2</string>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>187</red>
-                    <green>187</green>
-                    <blue>187</blue>
-                </color>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="precisionMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="minValue">
-                <double>0.0</double>
-            </property>
-            <property name="maxValue">
-                <double>1.0</double>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-            <property name="formatType">
-                <enum>decimal</enum>
-            </property>
-            <property name="colorMode">
-                <enum>caLineEdit::Static</enum>
-            </property>
-        </widget>
-        <widget class="caLabel" name="caLabel_35">
-            <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="0">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="text">
-                <string>RAM Block</string>
-            </property>
-            <property name="fontScaleMode">
-                <enum>ESimpleLabel::WidthAndHeight</enum>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>208</x>
-                    <y>587</y>
-                    <width>81</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-        </widget>
-        <widget class="caLabel" name="caLabel_36">
-            <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="0">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="text">
-                <string>Largest Free</string>
-            </property>
-            <property name="fontScaleMode">
-                <enum>ESimpleLabel::WidthAndHeight</enum>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>208</x>
-                    <y>574</y>
-                    <width>108</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-        </widget>
-        <widget class="caLineEdit" name="caLineEdit_30">
-            <property name="geometry">
-                <rect>
-                    <x>198</x>
-                    <y>605</y>
-                    <width>100</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="fontScaleMode">
-                <enum>caLineEdit::WidthAndHeight</enum>
-            </property>
-            <property name="channel">
-                <string>$(ioc):MEM_BLK_FREE</string>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>120</red>
-                    <green>120</green>
-                    <blue>120</blue>
-                </color>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignHCenter|Qt::AlignVCenter</set>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="precisionMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="minValue">
-                <double>0.0</double>
-            </property>
-            <property name="maxValue">
-                <double>1.0</double>
-            </property>
-            <property name="formatType">
-                <enum>decimal</enum>
-            </property>
-            <property name="colorMode">
-                <enum>caLineEdit::Alarm_Static</enum>
-            </property>
-        </widget>
         <widget class="caGraphics" name="caRectangle_6">
             <property name="form">
                 <enum>caGraphics::Rectangle</enum>
             </property>
             <property name="geometry">
                 <rect>
-                    <x>314</x>
-                    <y>575</y>
-                    <width>225</width>
-                    <height>1</height>
+                    <x>2</x>
+                    <y>294</y>
+                    <width>540</width>
+                    <height>2</height>
                 </rect>
             </property>
             <property name="foreground">
@@ -3523,1074 +3603,6 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
             </property>
             <property name="linestyle">
                 <enum>Solid</enum>
-            </property>
-        </widget>
-        <widget class="caGraphics" name="caRectangle_7">
-            <property name="form">
-                <enum>caGraphics::Rectangle</enum>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>314</x>
-                    <y>646</y>
-                    <width>225</width>
-                    <height>1</height>
-                </rect>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="fillstyle">
-                <enum>Filled</enum>
-            </property>
-            <property name="lineColor">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="linestyle">
-                <enum>Solid</enum>
-            </property>
-        </widget>
-        <widget class="caLabel" name="caLabel_37">
-            <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="0">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="text">
-                <string># IF Errors</string>
-            </property>
-            <property name="fontScaleMode">
-                <enum>ESimpleLabel::WidthAndHeight</enum>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>373</x>
-                    <y>652</y>
-                    <width>105</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-        </widget>
-        <widget class="caLabel" name="caLabel_38">
-            <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="0">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="text">
-                <string>Input</string>
-            </property>
-            <property name="fontScaleMode">
-                <enum>ESimpleLabel::WidthAndHeight</enum>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>373</x>
-                    <y>677</y>
-                    <width>45</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-        </widget>
-        <widget class="caLabel" name="caLabel_39">
-            <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="0">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="text">
-                <string>Output</string>
-            </property>
-            <property name="fontScaleMode">
-                <enum>ESimpleLabel::WidthAndHeight</enum>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>373</x>
-                    <y>697</y>
-                    <width>54</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-        </widget>
-        <widget class="caLineEdit" name="caLineEdit_31">
-            <property name="geometry">
-                <rect>
-                    <x>413</x>
-                    <y>677</y>
-                    <width>60</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="fontScaleMode">
-                <enum>caLineEdit::WidthAndHeight</enum>
-            </property>
-            <property name="channel">
-                <string>$(ioc):IFI_ERR_CNT</string>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>120</red>
-                    <green>120</green>
-                    <blue>120</blue>
-                </color>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignHCenter|Qt::AlignVCenter</set>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="precisionMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="minValue">
-                <double>0.0</double>
-            </property>
-            <property name="maxValue">
-                <double>1.0</double>
-            </property>
-            <property name="formatType">
-                <enum>decimal</enum>
-            </property>
-            <property name="colorMode">
-                <enum>caLineEdit::Alarm_Static</enum>
-            </property>
-        </widget>
-        <widget class="caLineEdit" name="caLineEdit_32">
-            <property name="geometry">
-                <rect>
-                    <x>413</x>
-                    <y>697</y>
-                    <width>60</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="fontScaleMode">
-                <enum>caLineEdit::WidthAndHeight</enum>
-            </property>
-            <property name="channel">
-                <string>$(ioc):IFO_ERR_CNT</string>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>120</red>
-                    <green>120</green>
-                    <blue>120</blue>
-                </color>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignHCenter|Qt::AlignVCenter</set>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="precisionMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="minValue">
-                <double>0.0</double>
-            </property>
-            <property name="maxValue">
-                <double>1.0</double>
-            </property>
-            <property name="formatType">
-                <enum>decimal</enum>
-            </property>
-            <property name="colorMode">
-                <enum>caLineEdit::Alarm_Static</enum>
-            </property>
-        </widget>
-        <widget class="caLabel" name="caLabel_40">
-            <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="0">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="text">
-                <string>% Free</string>
-            </property>
-            <property name="fontScaleMode">
-                <enum>ESimpleLabel::WidthAndHeight</enum>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>6</x>
-                    <y>683</y>
-                    <width>54</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-        </widget>
-        <widget class="caLabel" name="caLabel_41">
-            <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="0">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="text">
-                <string>Max</string>
-            </property>
-            <property name="fontScaleMode">
-                <enum>ESimpleLabel::WidthAndHeight</enum>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>6</x>
-                    <y>703</y>
-                    <width>50</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-        </widget>
-        <widget class="caLineEdit" name="caLineEdit_33">
-            <property name="geometry">
-                <rect>
-                    <x>88</x>
-                    <y>683</y>
-                    <width>100</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="fontScaleMode">
-                <enum>caLineEdit::WidthAndHeight</enum>
-            </property>
-            <property name="channel">
-                <string>$(ioc):SYS_MBUF_FREE</string>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>120</red>
-                    <green>120</green>
-                    <blue>120</blue>
-                </color>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignHCenter|Qt::AlignVCenter</set>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="precisionMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="minValue">
-                <double>0.0</double>
-            </property>
-            <property name="maxValue">
-                <double>1.0</double>
-            </property>
-            <property name="formatType">
-                <enum>decimal</enum>
-            </property>
-            <property name="colorMode">
-                <enum>caLineEdit::Alarm_Static</enum>
-            </property>
-        </widget>
-        <widget class="caLineEdit" name="caLineEdit_34">
-            <property name="geometry">
-                <rect>
-                    <x>88</x>
-                    <y>703</y>
-                    <width>100</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="fontScaleMode">
-                <enum>caLineEdit::WidthAndHeight</enum>
-            </property>
-            <property name="channel">
-                <string>$(ioc):SYS_MBUF_MAX</string>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>120</red>
-                    <green>120</green>
-                    <blue>120</blue>
-                </color>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignHCenter|Qt::AlignVCenter</set>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="precisionMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="minValue">
-                <double>0.0</double>
-            </property>
-            <property name="maxValue">
-                <double>1.0</double>
-            </property>
-            <property name="formatType">
-                <enum>decimal</enum>
-            </property>
-            <property name="colorMode">
-                <enum>caLineEdit::Alarm_Static</enum>
-            </property>
-        </widget>
-        <widget class="caLabel" name="caLabel_42">
-            <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="0">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="text">
-                <string>MBUFs</string>
-            </property>
-            <property name="fontScaleMode">
-                <enum>ESimpleLabel::WidthAndHeight</enum>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>159</x>
-                    <y>651</y>
-                    <width>100</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-        </widget>
-        <widget class="caGraphics" name="caRectangle_8">
-            <property name="form">
-                <enum>caGraphics::Rectangle</enum>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>0</x>
-                    <y>646</y>
-                    <width>315</width>
-                    <height>1</height>
-                </rect>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="fillstyle">
-                <enum>Filled</enum>
-            </property>
-            <property name="lineColor">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="linestyle">
-                <enum>Solid</enum>
-            </property>
-        </widget>
-        <widget class="caLabel" name="caLabel_43">
-            <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="0">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="text">
-                <string>BSP Revision</string>
-            </property>
-            <property name="fontScaleMode">
-                <enum>ESimpleLabel::WidthAndHeight</enum>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>5</x>
-                    <y>396</y>
-                    <width>110</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-        </widget>
-        <widget class="caLineEdit" name="caLineEdit_35">
-            <property name="geometry">
-                <rect>
-                    <x>112</x>
-                    <y>396</y>
-                    <width>350</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="fontScaleMode">
-                <enum>caLineEdit::WidthAndHeight</enum>
-            </property>
-            <property name="channel">
-                <string>$(ioc):BSP_REV</string>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>187</red>
-                    <green>187</green>
-                    <blue>187</blue>
-                </color>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="precisionMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="minValue">
-                <double>0.0</double>
-            </property>
-            <property name="maxValue">
-                <double>1.0</double>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-            <property name="formatType">
-                <enum>decimal</enum>
-            </property>
-            <property name="colorMode">
-                <enum>caLineEdit::Static</enum>
-            </property>
-        </widget>
-        <widget class="caLineEdit" name="caLineEdit_36">
-            <property name="geometry">
-                <rect>
-                    <x>4</x>
-                    <y>512</y>
-                    <width>265</width>
-                    <height>12</height>
-                </rect>
-            </property>
-            <property name="fontScaleMode">
-                <enum>caLineEdit::WidthAndHeight</enum>
-            </property>
-            <property name="channel">
-                <string>$(ioc):BOOTLINE3</string>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>187</red>
-                    <green>187</green>
-                    <blue>187</blue>
-                </color>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="precisionMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="minValue">
-                <double>0.0</double>
-            </property>
-            <property name="maxValue">
-                <double>1.0</double>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-            <property name="formatType">
-                <enum>decimal</enum>
-            </property>
-            <property name="colorMode">
-                <enum>caLineEdit::Static</enum>
-            </property>
-        </widget>
-        <widget class="caLineEdit" name="caLineEdit_37">
-            <property name="geometry">
-                <rect>
-                    <x>269</x>
-                    <y>512</y>
-                    <width>265</width>
-                    <height>12</height>
-                </rect>
-            </property>
-            <property name="fontScaleMode">
-                <enum>caLineEdit::WidthAndHeight</enum>
-            </property>
-            <property name="channel">
-                <string>$(ioc):BOOTLINE4</string>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>187</red>
-                    <green>187</green>
-                    <blue>187</blue>
-                </color>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="precisionMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="minValue">
-                <double>0.0</double>
-            </property>
-            <property name="maxValue">
-                <double>1.0</double>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-            <property name="formatType">
-                <enum>decimal</enum>
-            </property>
-            <property name="colorMode">
-                <enum>caLineEdit::Static</enum>
-            </property>
-        </widget>
-        <widget class="caLineEdit" name="caLineEdit_38">
-            <property name="geometry">
-                <rect>
-                    <x>4</x>
-                    <y>527</y>
-                    <width>265</width>
-                    <height>12</height>
-                </rect>
-            </property>
-            <property name="fontScaleMode">
-                <enum>caLineEdit::WidthAndHeight</enum>
-            </property>
-            <property name="channel">
-                <string>$(ioc):BOOTLINE5</string>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>187</red>
-                    <green>187</green>
-                    <blue>187</blue>
-                </color>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="precisionMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="minValue">
-                <double>0.0</double>
-            </property>
-            <property name="maxValue">
-                <double>1.0</double>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-            <property name="formatType">
-                <enum>decimal</enum>
-            </property>
-            <property name="colorMode">
-                <enum>caLineEdit::Static</enum>
-            </property>
-        </widget>
-        <widget class="caLineEdit" name="caLineEdit_39">
-            <property name="geometry">
-                <rect>
-                    <x>269</x>
-                    <y>527</y>
-                    <width>265</width>
-                    <height>12</height>
-                </rect>
-            </property>
-            <property name="fontScaleMode">
-                <enum>caLineEdit::WidthAndHeight</enum>
-            </property>
-            <property name="channel">
-                <string>$(ioc):BOOTLINE6</string>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>187</red>
-                    <green>187</green>
-                    <blue>187</blue>
-                </color>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="precisionMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="minValue">
-                <double>0.0</double>
-            </property>
-            <property name="maxValue">
-                <double>1.0</double>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-            <property name="formatType">
-                <enum>decimal</enum>
-            </property>
-            <property name="colorMode">
-                <enum>caLineEdit::Static</enum>
-            </property>
-        </widget>
-        <widget class="caLabel" name="caLabel_44">
-            <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="0">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="text">
-                <string>System</string>
-            </property>
-            <property name="fontScaleMode">
-                <enum>ESimpleLabel::WidthAndHeight</enum>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>110</x>
-                    <y>666</y>
-                    <width>54</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-        </widget>
-        <widget class="caLineEdit" name="caLineEdit_40">
-            <property name="geometry">
-                <rect>
-                    <x>198</x>
-                    <y>683</y>
-                    <width>100</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="fontScaleMode">
-                <enum>caLineEdit::WidthAndHeight</enum>
-            </property>
-            <property name="channel">
-                <string>$(ioc):DAT_MBUF_FREE</string>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>120</red>
-                    <green>120</green>
-                    <blue>120</blue>
-                </color>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignHCenter|Qt::AlignVCenter</set>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="precisionMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="minValue">
-                <double>0.0</double>
-            </property>
-            <property name="maxValue">
-                <double>1.0</double>
-            </property>
-            <property name="formatType">
-                <enum>decimal</enum>
-            </property>
-            <property name="colorMode">
-                <enum>caLineEdit::Alarm_Static</enum>
-            </property>
-        </widget>
-        <widget class="caLineEdit" name="caLineEdit_41">
-            <property name="geometry">
-                <rect>
-                    <x>198</x>
-                    <y>703</y>
-                    <width>100</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="fontScaleMode">
-                <enum>caLineEdit::WidthAndHeight</enum>
-            </property>
-            <property name="channel">
-                <string>$(ioc):DAT_MBUF_MAX</string>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>120</red>
-                    <green>120</green>
-                    <blue>120</blue>
-                </color>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignHCenter|Qt::AlignVCenter</set>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="limitsMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="precisionMode">
-                <enum>caLineEdit::Channel</enum>
-            </property>
-            <property name="minValue">
-                <double>0.0</double>
-            </property>
-            <property name="maxValue">
-                <double>1.0</double>
-            </property>
-            <property name="formatType">
-                <enum>decimal</enum>
-            </property>
-            <property name="colorMode">
-                <enum>caLineEdit::Alarm_Static</enum>
-            </property>
-        </widget>
-        <widget class="caLabel" name="caLabel_45">
-            <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="0">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="text">
-                <string>Data</string>
-            </property>
-            <property name="fontScaleMode">
-                <enum>ESimpleLabel::WidthAndHeight</enum>
-            </property>
-            <property name="geometry">
-                <rect>
-                    <x>220</x>
-                    <y>666</y>
-                    <width>50</width>
-                    <height>15</height>
-                </rect>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignAbsolute|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-        </widget>
-        <widget class="caRelatedDisplay" name="caRelatedDisplay_4">
-            <property name="geometry">
-                <rect>
-                    <x>86</x>
-                    <y>723</y>
-                    <width>101</width>
-                    <height>21</height>
-                </rect>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>158</red>
-                    <green>158</green>
-                    <blue>158</blue>
-                </color>
-            </property>
-            <property name="label">
-                <string>Cluster Info</string>
-            </property>
-            <property name="stackingMode">
-                <enum>Menu</enum>
-            </property>
-            <property name="labels">
-                <string>System Cluster Info</string>
-            </property>
-            <property name="files">
-                <string>ioc_stats_clust.adl</string>
-            </property>
-            <property name="args">
-                <string>ioc=$(ioc),pool=SYS,name=System,idx=1</string>
-            </property>
-            <property name="removeParent">
-                <string>false</string>
-            </property>
-        </widget>
-        <widget class="caRelatedDisplay" name="caRelatedDisplay_5">
-            <property name="geometry">
-                <rect>
-                    <x>197</x>
-                    <y>723</y>
-                    <width>101</width>
-                    <height>21</height>
-                </rect>
-            </property>
-            <property name="foreground">
-                <color alpha="255">
-                    <red>0</red>
-                    <green>0</green>
-                    <blue>0</blue>
-                </color>
-            </property>
-            <property name="background">
-                <color alpha="255">
-                    <red>158</red>
-                    <green>158</green>
-                    <blue>158</blue>
-                </color>
-            </property>
-            <property name="label">
-                <string>Cluster Info</string>
-            </property>
-            <property name="stackingMode">
-                <enum>Menu</enum>
-            </property>
-            <property name="labels">
-                <string>Data Cluster Info</string>
-            </property>
-            <property name="files">
-                <string>ioc_stats_clust.adl</string>
-            </property>
-            <property name="args">
-                <string>ioc=$(ioc),pool=DAT,name=Data,idx=0</string>
-            </property>
-            <property name="removeParent">
-                <string>false</string>
             </property>
         </widget>
         <zorder>caLabel_0</zorder>
@@ -4614,6 +3626,7 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <zorder>caLabel_14</zorder>
         <zorder>caLabel_15</zorder>
         <zorder>caRectangle_3</zorder>
+        <zorder>caRectangle_4</zorder>
         <zorder>caLabel_16</zorder>
         <zorder>caLabel_17</zorder>
         <zorder>caLabel_18</zorder>
@@ -4624,31 +3637,21 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <zorder>caLabel_23</zorder>
         <zorder>caLabel_24</zorder>
         <zorder>caLabel_25</zorder>
-        <zorder>caRectangle_4</zorder>
         <zorder>caLabel_26</zorder>
         <zorder>caLabel_27</zorder>
         <zorder>caLabel_28</zorder>
         <zorder>caLabel_29</zorder>
+        <zorder>caFrame_0</zorder>
         <zorder>caLabel_30</zorder>
         <zorder>caLabel_31</zorder>
         <zorder>caLabel_32</zorder>
         <zorder>caLabel_33</zorder>
-        <zorder>caRectangle_5</zorder>
         <zorder>caLabel_34</zorder>
         <zorder>caLabel_35</zorder>
         <zorder>caLabel_36</zorder>
-        <zorder>caRectangle_6</zorder>
-        <zorder>caRectangle_7</zorder>
         <zorder>caLabel_37</zorder>
-        <zorder>caLabel_38</zorder>
-        <zorder>caLabel_39</zorder>
-        <zorder>caLabel_40</zorder>
-        <zorder>caLabel_41</zorder>
-        <zorder>caLabel_42</zorder>
-        <zorder>caRectangle_8</zorder>
-        <zorder>caLabel_43</zorder>
-        <zorder>caLabel_44</zorder>
-        <zorder>caLabel_45</zorder>
+        <zorder>caRectangle_5</zorder>
+        <zorder>caRectangle_6</zorder>
         <zorder>caLineEdit_0</zorder>
         <zorder>caLineEdit_1</zorder>
         <zorder>caLineEdit_2</zorder>
@@ -4660,6 +3663,8 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <zorder>caLineEdit_8</zorder>
         <zorder>caLineEdit_9</zorder>
         <zorder>caLineEdit_10</zorder>
+        <zorder>caRelatedDisplay_0</zorder>
+        <zorder>caRelatedDisplay_1</zorder>
         <zorder>caLineEdit_11</zorder>
         <zorder>caLineEdit_12</zorder>
         <zorder>caLineEdit_13</zorder>
@@ -4671,34 +3676,18 @@ QWidget#centralWidget {background: rgba(200, 200, 200, 255);}
         <zorder>caLineEdit_19</zorder>
         <zorder>caLineEdit_20</zorder>
         <zorder>caLineEdit_21</zorder>
-        <zorder>caRelatedDisplay_0</zorder>
-        <zorder>caRelatedDisplay_1</zorder>
         <zorder>caLineEdit_22</zorder>
+        <zorder>caLineEdit_23</zorder>
+        <zorder>caLineEdit_24</zorder>
         <zorder>caMenu_0</zorder>
         <zorder>caRelatedDisplay_2</zorder>
         <zorder>caRelatedDisplay_3</zorder>
-        <zorder>caLineEdit_23</zorder>
-        <zorder>caLineEdit_24</zorder>
         <zorder>caLineEdit_25</zorder>
         <zorder>caLineEdit_26</zorder>
         <zorder>caLineEdit_27</zorder>
-        <zorder>caMessageButton_0</zorder>
         <zorder>caLineEdit_28</zorder>
         <zorder>caLineEdit_29</zorder>
-        <zorder>caLineEdit_30</zorder>
-        <zorder>caLineEdit_31</zorder>
-        <zorder>caLineEdit_32</zorder>
-        <zorder>caLineEdit_33</zorder>
-        <zorder>caLineEdit_34</zorder>
-        <zorder>caLineEdit_35</zorder>
-        <zorder>caLineEdit_36</zorder>
-        <zorder>caLineEdit_37</zorder>
-        <zorder>caLineEdit_38</zorder>
-        <zorder>caLineEdit_39</zorder>
-        <zorder>caLineEdit_40</zorder>
-        <zorder>caLineEdit_41</zorder>
-        <zorder>caRelatedDisplay_4</zorder>
-        <zorder>caRelatedDisplay_5</zorder>
+        <zorder>caMessageButton_0</zorder>
     </widget>
 </widget>
 </ui>
