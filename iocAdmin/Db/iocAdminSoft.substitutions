@@ -9,7 +9,7 @@
 file ioc.template
 {
 pattern { IOCNAME , TODFORMAT           }
-	{ "$(IOC)"  , "%m/%d/%Y %H:%M:%S" }
+	{ "$(IOC)"  , "%d/%m/%Y %H:%M:%S" }
 }
 file iocGeneralTime.template
 {
